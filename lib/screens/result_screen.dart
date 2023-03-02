@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class ResultScreen extends StatelessWidget {
 
-  ResultScreen({required this.result});
+  ResultScreen({super.key, required this.result});
   static const String id = 'result_screen';
   String result;
 
@@ -12,20 +12,20 @@ class ResultScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 24.0),
+        padding: const EdgeInsets.symmetric(horizontal: 24.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             Center(
               child: Text(result,
-              style: TextStyle(
+              style: const TextStyle(
                 color: Colors.blueAccent,
                 fontSize: 80.0,
                 fontWeight: FontWeight.w500,
               ),),
             ),
-            SizedBox(
+            const SizedBox(
               height: 48.0,
             ),
 
@@ -42,8 +42,8 @@ class ResultScreen extends StatelessWidget {
                   },
                   minWidth: 200.0,
                   height: 42.0,
-                  child: Text(
-                    'Powrót',
+                  child: const Text(
+                    'Return',
                   ),
                 ),
               ),

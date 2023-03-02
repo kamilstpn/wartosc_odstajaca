@@ -3,6 +3,8 @@ import 'result_screen.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 class WelcomeScreen extends StatefulWidget {
   static const String id = 'welcome_screen';
+
+  const WelcomeScreen({super.key});
   @override
   _WelcomeScreenState createState() => _WelcomeScreenState();
 }
@@ -35,40 +37,40 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 24.0),
+        padding: const EdgeInsets.symmetric(horizontal: 24.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             TypewriterAnimatedTextKit(
-              text: ['Wprowadź liczby'],
-              textStyle: TextStyle(
+              text: const ['Enter numbers'],
+              textStyle: const TextStyle(
                 color: Colors.black,
                 fontSize: 35.0,
                 fontWeight: FontWeight.w500,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 100.0,
             ),
             TextField(
               controller: _controller,
               keyboardType: TextInputType.number,
               autofocus: true,
-              style: TextStyle(color: Colors.blueAccent),
+              style: const TextStyle(color: Colors.blueAccent),
               decoration: InputDecoration(
-                prefixIcon: Icon(Icons.arrow_forward_rounded),
+                prefixIcon: const Icon(Icons.arrow_forward_rounded),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(30.0)
                 ),
-                labelText: 'Enter numbers',
+                //labelText: 'Enter numbers',
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 48.0,
             ),
             Padding(
-              padding: EdgeInsets.symmetric(vertical: 16.0),
+              padding: const EdgeInsets.symmetric(vertical: 16.0),
               child: Material(
                 color: Colors.blueAccent,
                 borderRadius: BorderRadius.circular(30.0),
@@ -84,8 +86,8 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                       showDialog(
                         context: context,
                         builder: (context){
-                            return AlertDialog(
-                              content: Text('Wprowadź przynajmniej 3 liczby'),
+                            return const AlertDialog(
+                              content: Text('Enter at least 3 numbers'),
                             );
                         },
                       );
@@ -99,8 +101,8 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                   },
                   minWidth: 200.0,
                   height: 42.0,
-                  child: Text(
-                    'Wyszukaj',
+                  child: const Text(
+                    'Search',
                   ),
                 ),
               ),

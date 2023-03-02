@@ -2,13 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:wartosc_odstajaca/screens/welcome_screen.dart';
 import 'package:wartosc_odstajaca/screens/result_screen.dart';
 
-void main()=>runApp(Start());
+void main()=>runApp(const Start());
 class Start extends StatelessWidget{
+  const Start({super.key});
+
   @override
   Widget build (BuildContext context){
     return MaterialApp(
       theme: ThemeData.dark().copyWith(
-        textTheme: TextTheme(
+        textTheme: const TextTheme(
           bodyText1: TextStyle(color:Colors.black54),
         ),
       ),
