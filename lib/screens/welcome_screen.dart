@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'result_screen.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 class WelcomeScreen extends StatefulWidget {
   static const String id = 'welcome_screen';
 
@@ -43,7 +44,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             TypewriterAnimatedTextKit(
-              text: const ['Enter numbers'],
+              text:  [AppLocalizations.of(context)!.mainText],
               textStyle: const TextStyle(
                 color: Colors.black,
                 fontSize: 35.0,
@@ -72,6 +73,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 16.0),
               child: Material(
+
                 color: Colors.blueAccent,
                 borderRadius: BorderRadius.circular(30.0),
                 elevation: 5.0,
@@ -86,8 +88,8 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                       showDialog(
                         context: context,
                         builder: (context){
-                            return const AlertDialog(
-                              content: Text('Enter at least 3 numbers'),
+                            return  AlertDialog(
+                              content: Text(AppLocalizations.of(context)!.alertDialog),
                             );
                         },
                       );
@@ -101,8 +103,8 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                   },
                   minWidth: 200.0,
                   height: 42.0,
-                  child: const Text(
-                    'Search',
+                  child:  Text(
+                    AppLocalizations.of(context)!.search,
                   ),
                 ),
               ),

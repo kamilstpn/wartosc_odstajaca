@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 class ResultScreen extends StatelessWidget {
 
   ResultScreen({super.key, required this.result});
@@ -25,12 +25,13 @@ class ResultScreen extends StatelessWidget {
                 fontWeight: FontWeight.w500,
               ),),
             ),
+
             const SizedBox(
               height: 48.0,
             ),
 
             Padding(
-              padding: EdgeInsets.symmetric(vertical: 16.0),
+              padding: const EdgeInsets.symmetric(vertical: 16.0),
               child: Material(
                 color: Colors.blueAccent,
                 borderRadius: BorderRadius.circular(30.0),
@@ -42,8 +43,8 @@ class ResultScreen extends StatelessWidget {
                   },
                   minWidth: 200.0,
                   height: 42.0,
-                  child: const Text(
-                    'Return',
+                  child:  Text(
+                    AppLocalizations.of(context)!.goBack,
                   ),
                 ),
               ),
